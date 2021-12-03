@@ -52,6 +52,8 @@ def main():
             board.button.wait_for_press()
             logging.info('Conversation started!')
             assistant.conversation()
+            if board.button.wait_for_press():
+                break
 
 if __name__ == '__main__':
     main()
